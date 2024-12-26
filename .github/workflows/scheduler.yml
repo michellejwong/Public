@@ -1,0 +1,23 @@
+name: discord_sonicarebrush scheduler
+
+on:
+  schedule:
+    #- cron: '10 14 * * 2'  # 8:10 AM Pacific Time (Tuesday)
+    #- cron: '59,06 8,9 * * *'  # test run
+    - cron: '*/5 * * * *' #runs every 5 minutes
+      #timezone: 'America/Los_Angeles' #apparently not existing, manually adjust
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest  # Runs on GitHub-hosted Ubuntu
+    steps:
+      #- name: Check out repository
+      #  uses: actions/checkout@v3
+      
+      #- name: Set up Python
+      #  uses: actions/setup-python@v3
+      #  with:
+      #    python-version: 3.x  # Specify your desired Python version (e.g., 3.8 or 3.9)
+      
+      - name: Run Python script
+        run: python discord_sonicarebrush.py
