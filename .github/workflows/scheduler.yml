@@ -3,7 +3,7 @@ name: discord_sonicarebrush scheduler
 on:
   schedule:
     #- cron: '10 14 * * 2'  # 8:10 AM Pacific Time (Tuesday)
-    #- cron: '59,06 8,9 * * *'  # test run
+    - cron: '13 9 * * *'  # test run
     - cron: '*/5 * * * *' #runs every 5 minutes
       #timezone: 'America/Los_Angeles' #apparently not existing, manually adjust
 
